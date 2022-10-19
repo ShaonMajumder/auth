@@ -1,5 +1,4 @@
 import axios from 'axios';
-import data from './data.json'
 
 export const api_url = process.env.REACT_APP_API_URL || "http://localhost:8000"
 export const client_url = process.env.REACT_APP_CLIENT_URL || "http://localhost:3000"
