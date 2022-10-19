@@ -1,11 +1,11 @@
 import axios from 'axios';
 import data from './data.json'
 
-export const api_url = data.api_url
-export const client_url = data.client_url
-export const login_url = data.login_url
-export const logout_url = data.logout_url
-export const csrf_token_url = data.csrf_token_url
+export const api_url = process.env.REACT_APP_API_URL || "http://localhost:8000"
+export const client_url = process.env.REACT_APP_CLIENT_URL || "http://localhost:3000"
+export const login_url = process.env.REACT_APP_LOGIN_URL || "api/login"
+export const logout_url = process.env.REACT_APP_LOGOUT_URL || "api/logout"
+export const csrf_token_url = process.env.REACT_APP_CSRF_TOKEN_URL || "/sanctum/csrf-cookie"
 
 // IF axios.create not used, we set default config for axio, axios.defaults.withCredentials = true
 
