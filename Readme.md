@@ -1,4 +1,14 @@
 # Authentication Using Laravel and React
+---
+author: Shaon Majumder
+date: 18-10-2022
+
+## Technologies Used
+- Laravel
+    * Sanctum
+- React
+
+
 
 ## Backend 
 ```bash
@@ -148,7 +158,7 @@ yarn add js-cookie
 
 
 
-Research :
+### Research
 - Slate
 https://qomarullah.medium.com/create-api-docs-using-slate-3b90565333d0
 - Clean Code
