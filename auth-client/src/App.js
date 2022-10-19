@@ -7,14 +7,13 @@ import Cookies from 'js-cookie';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = React.useState(
-    sessionStorage.getItem('loggedIn') == 'true' || false
+    sessionStorage.getItem('loggedIn') === 'true' || false
   );
   const login = () => {
     setLoggedIn(true);
     sessionStorage.setItem('loggedIn', true);
   };
   const logout = () => {
-    // apiClient.defaults.headers = `Bearer ${Cookies.get('access_token')}`;
     apiClient.interceptors.request.use(config => {
       config.headers['Authorization'] = `Bearer ${Cookies.get('access_token')}`;
       return config;

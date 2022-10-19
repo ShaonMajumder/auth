@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import apiClient,{api_url,client_url,login_url,csrf_token_url } from '../services/api';
+import apiClient,{login_url,csrf_token_url } from '../services/api';
 import Cookies from 'js-cookie';
 
 const Login = (props) => {
