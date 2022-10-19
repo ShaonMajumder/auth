@@ -9,7 +9,18 @@ date: 18-10-2022
     * Sanctum
 - React
 
-
+## Quick Run
+open bash
+```bash
+cd auth-api
+php artisan serve
+```
+open another bash
+```bash
+cd auth-client
+yarn install
+yarn start
+```
 
 ## Backend 
 ```bash
@@ -105,6 +116,12 @@ mv sanctum-react-spa auth-client
 cd auth-client
 ```
 
+Run Application
+```bash
+yarn install
+yarn start
+```
+
 set axio header for global :
 ```javascript
 headers: {
@@ -114,11 +131,7 @@ headers: {
     }
 ```
 
-Run Application
-```bash
-yarn install
-yarn start
-```
+
 
 ### Error Handling
 - if ERR_OSSL_EVP_UNSUPPORTED Error :
