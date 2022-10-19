@@ -18,6 +18,4 @@ const apiClient = axios.create({
     withCredentials: true,
 })
 
-console.log(apiClient.defaults.headers)
-
 export default apiClient
