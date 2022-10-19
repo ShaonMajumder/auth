@@ -21,6 +21,7 @@ const App = () => {
     });
     apiClient.post(logout_url,[]).then(response => {
       if (response.status === 200) { //204
+        Cookies.remove('access_token');
         setLoggedIn(false);
         sessionStorage.setItem('loggedIn', false);
       }
