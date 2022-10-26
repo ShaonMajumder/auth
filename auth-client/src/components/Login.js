@@ -22,6 +22,7 @@ const Login = (props) => {
                 console.log(response.data.access_token)
                 if (response.status === 200) { //204
                     Cookies.set('access_token',response.data.data.access_token)
+                    sessionStorage.setItem('loggedIn', true)
                     props.login();
                     setToHome(true);
                 }
