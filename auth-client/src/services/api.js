@@ -8,6 +8,13 @@ export const logout_url = process.env.REACT_APP_LOGOUT_URL || "api/logout"
 export const csrf_token_url = process.env.REACT_APP_CSRF_TOKEN_URL || "/sanctum/csrf-cookie"
 
 // IF axios.create not used, we set default config for axio, axios.defaults.withCredentials = true
+
+// if logged in (for changing header for a single property of an axios call, here apiClient = const apiClient = axios.create( )
+// apiClient.interceptors.request.use(config => {
+//     config.headers['Authorization'] = `Bearer ${Cookies.get('access_token')}`;
+//     return config;
+//   });
+
 var headers;
 const isLoggedIn = sessionStorage.getItem('loggedIn') == 'true' || false
 if(isLoggedIn){
